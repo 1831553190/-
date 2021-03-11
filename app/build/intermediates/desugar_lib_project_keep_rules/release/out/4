@@ -1,7 +1,0 @@
--keep class j$.time.format.DateTimeFormatter {
-    j$.time.format.DateTimeFormatter ofPattern(java.lang.String);
-}
--keep class j$.time.LocalDate {
-    java.lang.String format(j$.time.format.DateTimeFormatter);
-    j$.time.LocalDate now();
-}
