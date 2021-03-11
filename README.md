@@ -20,6 +20,6 @@
 
 
 截图：
- <img src="Screenshots/m1.jpg" width = "45%" height = "45%" alt="" align=center />
- <img src="Screenshots/l1.jpg" width = "45%" height = "45%" alt="" align=center />
- <img src="Screenshots/d1.jpg" width = "45%" height = "45%" alt="" align=center />
+![](./Screenshots/m1.jpg){:height="45%" width="45%"}
+![](./Screenshots/l1.jpg){:height="45%" width="45%"}
+![](./Screenshots/d1.jpg){:height="45%" width="45%"}
