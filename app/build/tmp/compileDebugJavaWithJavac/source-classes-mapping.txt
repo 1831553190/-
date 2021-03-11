@@ -1,0 +1,67 @@
+cn/edu/guet/coursetable/databinding/FragmentCourseBinding.java
+ cn.edu.guet.coursetable.databinding.FragmentCourseBinding
+cn/edu/guet/coursetable/model/Experimental.java
+ cn.edu.guet.coursetable.model.Experimental
+cn/edu/guet/coursetable/databinding/LayoutLoginBinding.java
+ cn.edu.guet.coursetable.databinding.LayoutLoginBinding
+cn/edu/guet/coursetable/databinding/FragmentUserBinding.java
+ cn.edu.guet.coursetable.databinding.FragmentUserBinding
+cn/edu/guet/coursetable/util/CookieCache.java
+ cn.edu.guet.coursetable.util.CookieCache
+cn/edu/guet/coursetable/database/AppDatabase_Impl.java
+ cn.edu.guet.coursetable.database.AppDatabase_Impl
+ cn.edu.guet.coursetable.database.AppDatabase_Impl$1
+cn/edu/guet/coursetable/databinding/DialogCourseDetailBinding.java
+ cn.edu.guet.coursetable.databinding.DialogCourseDetailBinding
+cn/edu/guet/coursetable/database/Dao_Impl.java
+ cn.edu.guet.coursetable.database.Dao_Impl
+ cn.edu.guet.coursetable.database.Dao_Impl$1
+ cn.edu.guet.coursetable.database.Dao_Impl$10
+ cn.edu.guet.coursetable.database.Dao_Impl$11
+ cn.edu.guet.coursetable.database.Dao_Impl$12
+ cn.edu.guet.coursetable.database.Dao_Impl$13
+ cn.edu.guet.coursetable.database.Dao_Impl$14
+ cn.edu.guet.coursetable.database.Dao_Impl$15
+ cn.edu.guet.coursetable.database.Dao_Impl$16
+ cn.edu.guet.coursetable.database.Dao_Impl$17
+ cn.edu.guet.coursetable.database.Dao_Impl$18
+ cn.edu.guet.coursetable.database.Dao_Impl$19
+ cn.edu.guet.coursetable.database.Dao_Impl$2
+ cn.edu.guet.coursetable.database.Dao_Impl$20
+ cn.edu.guet.coursetable.database.Dao_Impl$21
+ cn.edu.guet.coursetable.database.Dao_Impl$22
+ cn.edu.guet.coursetable.database.Dao_Impl$23
+ cn.edu.guet.coursetable.database.Dao_Impl$24
+ cn.edu.guet.coursetable.database.Dao_Impl$25
+ cn.edu.guet.coursetable.database.Dao_Impl$26
+ cn.edu.guet.coursetable.database.Dao_Impl$27
+ cn.edu.guet.coursetable.database.Dao_Impl$3
+ cn.edu.guet.coursetable.database.Dao_Impl$4
+ cn.edu.guet.coursetable.database.Dao_Impl$5
+ cn.edu.guet.coursetable.database.Dao_Impl$6
+ cn.edu.guet.coursetable.database.Dao_Impl$7
+ cn.edu.guet.coursetable.database.Dao_Impl$8
+ cn.edu.guet.coursetable.database.Dao_Impl$9
+cn/edu/guet/coursetable/adapter/Experimental2Adapter.java
+ cn.edu.guet.coursetable.adapter.Experimental2Adapter
+ cn.edu.guet.coursetable.adapter.Experimental2Adapter$1
+cn/edu/guet/coursetable/model/ExamData.java
+ cn.edu.guet.coursetable.model.ExamData
+cn/edu/guet/coursetable/adapter/Course2Adapter.java
+ cn.edu.guet.coursetable.adapter.Course2Adapter
+cn/edu/guet/coursetable/databinding/ItemCourseDetailBinding.java
+ cn.edu.guet.coursetable.databinding.ItemCourseDetailBinding
+cn/edu/guet/coursetable/adapter/ExamAdapter.java
+ cn.edu.guet.coursetable.adapter.ExamAdapter
+cn/edu/guet/coursetable/databinding/SpinnerItemBinding.java
+ cn.edu.guet.coursetable.databinding.SpinnerItemBinding
+cn/edu/guet/coursetable/databinding/ActivityMainBinding.java
+ cn.edu.guet.coursetable.databinding.ActivityMainBinding
+cn/edu/guet/coursetable/databinding/LayoutSettingItemBinding.java
+ cn.edu.guet.coursetable.databinding.LayoutSettingItemBinding
+cn/edu/guet/coursetable/util/DateUtil.java
+ cn.edu.guet.coursetable.util.DateUtil
+cn/edu/guet/coursetable/BuildConfig.java
+ cn.edu.guet.coursetable.BuildConfig
+cn/edu/guet/coursetable/model/TermInfo.java
+ cn.edu.guet.coursetable.model.TermInfo

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="st_Setting">
+        <attr name="st_icon" format="reference"/>
+        <attr name="st_titleText" format="string"/>
+        <attr name="st_subTitleText" format="string"/>
+    </declare-styleable>
+</resources>

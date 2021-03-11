@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <top.limuyang2.shadowlayoutlib.ShadowConstraintLayout
+        android:id="@+id/goto_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:l_radius="2dp"
+        app:l_shadowAlpha="0.2"
+        app:l_shadowElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <top.limuyang2.shadowlayoutlib.ShadowFrameLayout
+            android:id="@+id/ImgFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            app:l_radius="40dp"
+            app:l_shadowAlpha="0.4"
+            app:l_shadowElevation="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginLeft="16dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                app:srcCompat="@mipmap/ic_i" />
+
+
+        </top.limuyang2.shadowlayoutlib.ShadowFrameLayout>
+
+
+        <TextView
+            android:id="@+id/header_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="未登录"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/header_number"
+            app:layout_constraintStart_toEndOf="@+id/ImgFrame"
+            app:layout_constraintTop_toTopOf="@+id/ImgFrame"
+            app:layout_constraintVertical_chainStyle="spread"
+            android:layout_marginLeft="8dp" />
+
+        <TextView
+            android:id="@+id/header_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击登录"
+            app:layout_constraintBottom_toBottomOf="@+id/ImgFrame"
+            app:layout_constraintStart_toStartOf="@+id/header_username"
+            app:layout_constraintTop_toBottomOf="@+id/header_username" />
+    </top.limuyang2.shadowlayoutlib.ShadowConstraintLayout>
+
+    <cn.edu.guet.coursetable.ui.SettingItem
+        android:id="@+id/test"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:st_titleText="测试"
+        app:st_subTitleText="测试"
+        app:st_icon="@mipmap/head03"
+        app:layout_constraintTop_toBottomOf="@+id/goto_login" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

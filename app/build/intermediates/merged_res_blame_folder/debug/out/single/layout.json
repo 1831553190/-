@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/home/eswd/AndroidStudioProjects/GUET/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_course.xml",
+        "source": "/home/eswd/AndroidStudioProjects/GUET/app/src/main/res/layout/fragment_course.xml"
+    },
+    {
+        "merged": "/home/eswd/AndroidStudioProjects/GUET/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_setting_item.xml",
+        "source": "/home/eswd/AndroidStudioProjects/GUET/app/src/main/res/layout/layout_setting_item.xml"
+    },
+    {
+        "merged": "/home/eswd/AndroidStudioProjects/GUET/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/item_course_detail.xml",
+        "source": "/home/eswd/AndroidStudioProjects/GUET/app/src/main/res/layout/item_course_detail.xml"
+    },
+    {
+        "merged": "/home/eswd/AndroidStudioProjects/GUET/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/home/eswd/AndroidStudioProjects/GUET/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/eswd/AndroidStudioProjects/GUET/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_user.xml",
+        "source": "/home/eswd/AndroidStudioProjects/GUET/app/src/main/res/layout/fragment_user.xml"
+    },
+    {
+        "merged": "/home/eswd/AndroidStudioProjects/GUET/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/dialog_course_detail.xml",
+        "source": "/home/eswd/AndroidStudioProjects/GUET/app/src/main/res/layout/dialog_course_detail.xml"
+    },
+    {
+        "merged": "/home/eswd/AndroidStudioProjects/GUET/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/layout_login.xml",
+        "source": "/home/eswd/AndroidStudioProjects/GUET/app/src/main/res/layout/layout_login.xml"
+    },
+    {
+        "merged": "/home/eswd/AndroidStudioProjects/GUET/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/spinner_item.xml",
+        "source": "/home/eswd/AndroidStudioProjects/GUET/app/src/main/res/layout/spinner_item.xml"
+    }
+]
