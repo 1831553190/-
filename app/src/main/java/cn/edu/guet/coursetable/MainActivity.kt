@@ -35,7 +35,7 @@ class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mView=ActivityMainBinding.inflate(layoutInflater)
+        mView = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mView.root)
         //注册EventBus
         EventBus.getDefault().register(this)
@@ -44,26 +44,28 @@ class MainActivity : BaseActivity() {
 
 
         //设置ViewPager2的适配器
-        mView.viewpager.adapter=object :FragmentStateAdapter(this){
+        mView.viewpager.adapter = object : FragmentStateAdapter(this) {
 
             override fun createFragment(position: Int): Fragment {
-                return if (position==0) FragmentCourse.getInstance() else FragmentUser.getInstance()
+                return if (position == 0) FragmentCourse.getInstance() else FragmentUser.getInstance()
             }
 
             override fun getItemCount(): Int {
                 return 2
             }
         }
-        supportActionBar?.setTitle(LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd")))
+        supportActionBar?.setTitle(
+            LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"))
+        )
         //设置副标题
         mView.mainToolbar.setSubtitle("桂电课程表")
 
         //设置导航监听
         mView.bottomMain.setOnNavigationItemSelectedListener {
-            when(it.itemId){
-                R.id.menu_course->
+            when (it.itemId) {
+                R.id.menu_course ->
                     mView.viewpager.setCurrentItem(0)
-                R.id.menu_more->
+                R.id.menu_more ->
                     mView.viewpager.setCurrentItem(1)
             }
             return@setOnNavigationItemSelectedListener true;
@@ -71,7 +73,7 @@ class MainActivity : BaseActivity() {
 
 
         //添加ViewPager2的选择事件，使Spinner在切换Fragment的时候能自动显示消失
-        mView.viewpager.registerOnPageChangeCallback(object :ViewPager2.OnPageChangeCallback(){
+        mView.viewpager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 mView.bottomMain.setSelectedItemId(
@@ -92,21 +94,38 @@ class MainActivity : BaseActivity() {
             )
         )
 
+        mView.toolbarSpinner.onItemSelectedListener=object:AdapterView.OnItemSelectedListener{
+            override fun onNothingSelected(parent: AdapterView<*>?) {
 
-        //Spinner点击后切换周数
-        mView.toolbarSpinner.setOnItemSelectedListener(object :
-            AdapterView.OnItemSelectedListener {
+            }
+
             override fun onItemSelected(
                 parent: AdapterView<*>?,
-                view: View,
+                view: View?,
                 position: Int,
                 id: Long
             ) {
-                EventBus.getDefault().post((position+1).toString())
+                EventBus.getDefault().post((position + 1).toString())
+
             }
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {}
-        })
+        }
+
+
+//        //Spinner点击后切换周数
+//        mView.toolbarSpinner.setOnItemSelectedListener(object :
+//            AdapterView.OnItemSelectedListener {
+//            override fun onItemSelected(
+//                parent: AdapterView<*>?,
+//                view: View,
+//                position: Int,
+//                id: Long
+//            ) {
+////                EventBus.getDefault().post((position+1).toString())
+//            }
+//
+//            override fun onNothingSelected(parent: AdapterView<*>?) {}
+//        })
     }
 
 
@@ -114,8 +133,8 @@ class MainActivity : BaseActivity() {
      * EventBus获取广播周数并获取后，设置周数
      */
     @Subscribe(threadMode = ThreadMode.MAIN)
-    fun updateSpinnerText(week:String){
-        mView.toolbarSpinner.setSelection(week.toInt()-1)
+    fun updateSpinnerText(week: String) {
+        mView.toolbarSpinner.setSelection(week.toInt() - 1)
         supportActionBar?.setSubtitle("当前第${week}周")
         Log.d("TAG", "onDestroy: $week")
 
