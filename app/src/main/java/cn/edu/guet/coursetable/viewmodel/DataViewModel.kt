@@ -15,6 +15,7 @@ import cn.edu.guet.coursetable.api.ApiInterface
 import cn.edu.guet.coursetable.database.AppDatabase
 import cn.edu.guet.coursetable.model.Account
 import cn.edu.guet.coursetable.model.Course
+import cn.edu.guet.coursetable.model.CoursePlan
 import cn.edu.guet.coursetable.model.TermInfo
 import cn.edu.guet.coursetable.util.DateUtil
 import cn.edu.guet.coursetable.util.NetUtil
@@ -29,6 +30,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZoneId
 import java.util.*
+import kotlin.collections.HashMap
 
 class DataViewModel(application: Application) : AndroidViewModel(application) {
     //验证码数据
@@ -44,6 +46,50 @@ class DataViewModel(application: Application) : AndroidViewModel(application) {
     val TAG="DataViewModel"
 
     val account = MutableLiveData<Account>()
+
+
+    var termInfo2:TermInfo?=null
+    var accountInfo:Account?=null
+
+
+
+    val coursePlan = MutableLiveData<List<CoursePlan>>()
+
+    fun loadCoursePlan(){
+        viewModelScope.launch {
+            try {
+                val param=HashMap<String,String>()
+                param["_dc"]=System.currentTimeMillis().toString()
+                if (termInfo2!=null){
+                    param["term"]= termInfo2!!.term
+                }else{
+                    termInfo2=appdb.userDao().getTermInfo()
+                    param["term"]= termInfo2!!.term
+                }
+                if(accountInfo!=null){
+                    accountInfo=appdb.userDao().getAccountInfo()
+                    param["grade"]= accountInfo!!.grade.toString()
+                }
+                param["grade"]="2018"
+                param["dptno"]="3"
+                param["term"]="2020-2021_2"
+                param["spno"]="080611W"
+                param["stype"]="正常"
+                param["page"]="1"
+                param["start"]="0"
+                param["limit"]="25"
+                param["grade"]
+                val coursePlanList=apiInterface.getPlan(param).data
+                coursePlan.postValue(coursePlanList!!)
+            }catch (e:Exception){
+
+            }
+
+        }
+    }
+
+
+
 
     init {
 
@@ -133,12 +179,14 @@ class DataViewModel(application: Application) : AndroidViewModel(application) {
                             val sdate = Date(it.startdate)
                             return@filter edate.time >= timeNow && sdate.time < timeNow
                         }?.first() ?: TermInfo()
+                        termInfo2=termInfo1
                         return@async termInfo1
                     }
                     studentInfo.await().also {
                         if (it != null) {
                             appdb.userDao().insert(it)
                             account.postValue(it)
+                            accountInfo=it
                         }
                     }
                     termInfo.await().also {

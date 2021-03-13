@@ -56,7 +56,7 @@ class FragmentUser:Fragment() {
             startActivity(Intent(context,LoginActivity::class.java))
         }
         mView.test.setOnClickListener{
-            Toast.makeText(requireContext(),"测试",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(context,CoursePlanActivity::class.java))
         }
         dbViewModel.account.observe(viewLifecycleOwner, Observer {
             mView.headerUsername.text=it.name

@@ -47,4 +47,22 @@ interface ApiInterface {
     @Headers("Referer:http://172.16.13.22/Login/MainDesktop")
     @GET("Student/GetStuScore")
     suspend fun getScoresCal(@QueryMap body: HashMap<String, String>): ResponseBody
+
+
+    /**
+     * 获取选课信息
+     */
+    @Headers("Referer:http://172.16.13.22/Login/MainDesktop")
+    @GET("student/GetPlan")
+    suspend fun getPlan(@QueryMap body: HashMap<String, String>):Msg<List<CoursePlan>>
+
+    /**
+     * 获取选课信息
+     */
+    @Headers("Referer:http://172.16.13.22/Login/MainDesktop")
+    @GET("student/GetPlan")
+    suspend fun getPlanDetail(@QueryMap body: HashMap<String, String>):CoursePlan
+
+
+
 }
